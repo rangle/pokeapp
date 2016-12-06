@@ -1,3 +1,12 @@
-<p>
-  pokemon-detail works!
-</p>
+<div *ngIf="pokemon === undefined">
+  Loading
+</div>
+
+<div *ngIf="pokemon">
+  <h2>{{pokemon?.name}}</h2>
+  <div>
+    <strong>Types:</strong>
+    {{types}}
+  </div>
+  <a [routerLink]="['/detail', pokemon.id + 1]">Next</a>
+</div>

@@ -4,6 +4,11 @@ import { Observable } from 'rxjs';
 
 import 'rxjs/add/operator/map';
 
+export interface Pokemon {
+  name: string;
+  types: any[];
+}
+
 @Injectable()
 export class PokemonService {
 
@@ -12,5 +17,10 @@ export class PokemonService {
   getAllPokemon = () => {
     return this.http.get('http://pokeapi.co/api/v2/pokemon/')
       .map(response => response.json());
+  }
+
+  getPokemon = (name: string) => {
+    return this.http.get(`http://pokeapi.co/api/v2/pokemon/${name}/`)
+      .map<Pokemon>(response => response.json());
   }
 }
