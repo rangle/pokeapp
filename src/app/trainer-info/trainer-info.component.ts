@@ -13,3 +13,6 @@ export class TrainerInfoComponent implements OnInit {
   }
 
 }
+
+// 1. Add trainer info page to router
+// 2. Create a link from app component to the new trainer info page

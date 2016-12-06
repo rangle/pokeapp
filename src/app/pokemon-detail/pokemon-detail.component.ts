@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/mergeMap';
 
@@ -9,7 +9,7 @@ import { Pokemon, PokemonService } from '../pokemon.service';
   templateUrl: './pokemon-detail.component.html',
   styleUrls: ['./pokemon-detail.component.css']
 })
-export class PokemonDetailComponent implements OnInit, OnDestroy {
+export class PokemonDetailComponent implements OnInit {
   pokemon;
 
   types = '';
@@ -24,9 +24,5 @@ export class PokemonDetailComponent implements OnInit, OnDestroy {
 
         this.types = this.pokemon.types.map(({ type }) => type.name).join(', ');
       });
-  }
-
-  ngOnDestroy() {
-    console.log('component destroyed');
   }
 }

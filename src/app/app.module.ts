@@ -13,6 +13,7 @@ import { TrainerInfoComponent } from './trainer-info/trainer-info.component';
 const routes: Routes = [
   { path: '', component: PokemonListComponent },
   { path: 'detail/:name', component: PokemonDetailComponent },
+  { path: 'trainer-info', component: TrainerInfoComponent },
 ];
 
 @NgModule({
