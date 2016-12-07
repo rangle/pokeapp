@@ -10,6 +10,8 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { TrainerInfoComponent } from './trainer-info/trainer-info.component';
 import { PokemonDisplayComponent } from './pokemon-display/pokemon-display.component';
+import { UserServiceService } from './user-service.service';
+import { ModalComponent } from './modal/modal.component';
 
 const routes: Routes = [
   { path: '', component: PokemonListComponent },
@@ -23,7 +25,8 @@ const routes: Routes = [
     PokemonListComponent,
     PokemonDetailComponent,
     TrainerInfoComponent,
-    PokemonDisplayComponent
+    PokemonDisplayComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ const routes: Routes = [
   ],
   providers: [
     PokemonService,
+    UserServiceService,
   ],
   bootstrap: [AppComponent]
 })
