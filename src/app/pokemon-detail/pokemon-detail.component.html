@@ -3,10 +3,6 @@
 </div>
 
 <div *ngIf="pokemon">
-  <h2>{{pokemon?.name}}</h2>
-  <div>
-    <strong>Types:</strong>
-    {{types}}
-  </div>
+  <app-pokemon-display [pokemon]="pokemon"></app-pokemon-display>
   <a [routerLink]="['/detail', pokemon.id + 1]">Next</a>
 </div>

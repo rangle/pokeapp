@@ -12,8 +12,6 @@ import { Pokemon, PokemonService } from '../pokemon.service';
 export class PokemonDetailComponent implements OnInit {
   pokemon;
 
-  types = '';
-
   constructor(private pokemonService: PokemonService, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
@@ -21,8 +19,6 @@ export class PokemonDetailComponent implements OnInit {
       .mergeMap(({ name }) => this.pokemonService.getPokemon(name))
       .subscribe((pokemon: Pokemon) => {
         this.pokemon = pokemon;
-
-        this.types = this.pokemon.types.map(({ type }) => type.name).join(', ');
       });
   }
 }

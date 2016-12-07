@@ -9,6 +9,7 @@ import { PokemonService } from './pokemon.service';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { TrainerInfoComponent } from './trainer-info/trainer-info.component';
+import { PokemonDisplayComponent } from './pokemon-display/pokemon-display.component';
 
 const routes: Routes = [
   { path: '', component: PokemonListComponent },
@@ -21,7 +22,8 @@ const routes: Routes = [
     AppComponent,
     PokemonListComponent,
     PokemonDetailComponent,
-    TrainerInfoComponent
+    TrainerInfoComponent,
+    PokemonDisplayComponent
   ],
   imports: [
     BrowserModule,
